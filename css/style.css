@@ -10,6 +10,7 @@ html, body {
 
 .wrapper {
     height: 100%;
+    width: 100%;
     background-color: #CCC;
     overflow: hidden; /* truncates the page content to the screen dimensions */
 }
@@ -37,12 +38,12 @@ BODY
     float: left;
     width: 250px;
     height: 100%;
-    border-right: 1px solid #666666;
+/*    border-right: 1px solid #666666;*/
     background-color: #BBB;
 /*    box-shadow: 1px 0px 5px #666666;*/
 }
 
 .content {
-    display: inline;
-    float: left;
+    height: 100%;
+    margin-left: 250px;
 }
