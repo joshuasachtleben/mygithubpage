@@ -36,3 +36,22 @@
         text-align: left;
     }
 }
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #e3e3e3;
+    }
+
+    nav li:last-child {
+        border-bottom: 0;
+    }
+
+
+}
