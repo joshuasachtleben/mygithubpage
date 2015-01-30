@@ -1,4 +1,5 @@
-@media screen and (min-width: 700px) {
+/* Large screens at 780px or bigger */
+@media screen and (min-width: 780px) {
     /**********************
     NAVIGATION
     **********************/
@@ -37,6 +38,7 @@
     }
 }
 
+/* Small screens at 480px or smaller */
 @media screen and (max-width: 480px) {
     nav ul {
         margin: 0;
