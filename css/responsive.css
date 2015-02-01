@@ -1,4 +1,5 @@
 /* Large screens at 780px or bigger */
+
 @media screen and (min-width: 780px) {
     /**********************
     NAVIGATION
@@ -7,53 +8,60 @@
     header {
         padding: 0;
     }
-
     .header_title {
         text-align: left;
         padding-left: 20px;
     }
-
     /**********************
     NAVIGATION
     **********************/
 
     .nav_menu {
         /* hide lower nav menu when screen is wider than 700px */
+
         display: none;
     }
-
     .header_nav_menu {
         display: inline-block;
         float: right;
     }
-
     nav {
         background: none;
         text-align: right;
     }
-
     #header_title {
         float: left;
         text-align: left;
     }
+    .content {
+        padding-top: 56px;
+    }
 }
-
 /* Small screens at 480px or smaller */
+
 @media screen and (max-width: 480px) {
+    /**********************
+    NAVIGATION
+    **********************/
+
     nav ul {
         margin: 0;
         padding: 0;
     }
-
     nav li {
         display: block;
         padding: 10px 0;
         border-bottom: 1px solid #e3e3e3;
     }
-
     nav li:last-child {
         border-bottom: 0;
     }
+    /**********************
+    BODY
+    **********************/
 
-
+    .content {
+        padding-top: 211px;
+        /* 56 (height of header) + 155 (height of nav) */
+    }
 }
