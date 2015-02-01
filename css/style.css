@@ -49,7 +49,7 @@ HEADER
 header {
     width: 100%;
     height: 56px;
-    position: relative;
+    position: fixed; /* keeps header locked at the top */
     box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
 
@@ -96,16 +96,23 @@ BODY
 
 .content {
     height: 100%;
-/*    margin-top: 100px;*/
+    padding-top: 56px; /* same height as header */
 }
 
 section {
     background-color: white;
-    /*    margin-bottom: 500px;*/
+    max-width: 960px;
+    padding: 5% 5%;
+    margin: 50px auto;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
 }
 
 section h1 {
     margin: 0;
+}
+
+section p {
+    line-height: 1.25em;
 }
 /**********************
 COLORS
