@@ -83,11 +83,15 @@ NAVIGATION
 
 .nav_menu {
     margin-top: 56px;
+    height: 40px;
     box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    display: none;
+    /* hide by default, show with menu icon press */
 }
 
 nav {
     text-align: center;
+    height: 100%;
 }
 
 nav ul {
@@ -109,10 +113,18 @@ BODY
 **********************/
 
 .content {
-    height: 100%;
-    padding-top: 94px;
-    /* same height as header */
+    height: auto;
+    /* set to allow banner div to fill remaining space after header */
 
+    width: 100%;
+    position: absolute;
+    top: 56px;
+    /* height of banner (56px) */
+
+    bottom: 0;
+    /*this pushes the bottom of the content container to the bottom of viewport to avoid overlap when calculating banner height */
+
+    box-sizing: border-box;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -136,7 +148,7 @@ BODY
 .banner {
     background-color: white;
     min-height: 100%;
-    margin: -94px -20px 0 -20px;
+    margin: 0 -20px 0 -20px;
 }
 
 #banner_content {
@@ -146,6 +158,7 @@ BODY
     height: 400px;
     max-width: 960px;
     text-align: center;
+    margin: auto;
 }
 
 #avatar {

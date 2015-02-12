@@ -16,11 +16,6 @@
     NAVIGATION
     **********************/
 
-    .nav_menu {
-        /* hide lower nav menu when screen is wider than 700px */
-
-        display: none;
-    }
     .header_nav_menu {
         display: inline-block;
         float: right;
@@ -33,18 +28,16 @@
         float: left;
         text-align: left;
     }
-    .content {
-        padding-top: 56px;
-    }
-    .banner {
-        margin-top: -56px;
-    }
+    /**********************
+    BODY
+    **********************/
 }
 /* Small screens at 480px or smaller */
 
 @media screen and (max-width: 480px) {
     /**********************
     NAVIGATION
+    This functionality will be enabled with a menu icon within the header
     **********************/
 
     nav ul {
@@ -62,12 +55,4 @@
     /**********************
     BODY
     **********************/
-
-    .content {
-        padding-top: 211px;
-        /* 56 (height of header) + 155 (height of nav) */
-    }
-    .banner {
-        margin-top: -211px;
-    }
 }
