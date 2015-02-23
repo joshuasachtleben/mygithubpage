@@ -31,6 +31,22 @@
     /**********************
     BODY
     **********************/
+
+    #avatar {
+        float: left;
+        margin-left: 15%;
+    }
+
+    #contact_banner {
+        float: left;
+        margin-left: 5%;
+        height: 100%;
+        display: table;
+    }
+    #contact_banner_text {
+        display: table-cell;
+        vertical-align: middle;
+    }
 }
 /* Small screens at 480px or smaller */
 
@@ -52,7 +68,4 @@
     nav li:last-child {
         border-bottom: 0;
     }
-    /**********************
-    BODY
-    **********************/
 }
