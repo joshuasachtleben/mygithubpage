@@ -74,16 +74,16 @@ NAVIGATION
 **********************/
 
 .header_nav_menu {
-    /* hide nav within header by default */
-
     display: none;
+    /* hide nav within header by default, show with responsive.css */
+
     height: 40px;
     /* must set height of child element if using absolute vertical centering in verticalCenter class on parent element */
 }
 
 .nav_menu {
     margin-top: 56px;
-    height: 40px;
+    height: 160px;
     box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
     display: none;
     /* hide by default, show with menu icon press */
@@ -96,17 +96,25 @@ nav {
 
 nav ul {
     list-style: none;
-    margin: 0 10px;
-    padding: 10px 0;
+    margin: 0;
+    padding: 0;
 }
 
 nav li {
-    display: inline-block;
+    display: block;
+    padding-top: 10px;
+    border-bottom: 1px solid #e3e3e3;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+nav li:last-child {
+    border-bottom: 0;
 }
 
 nav a {
     font-weight: 700;
-    padding: 15px 15px;
+    padding: 5px 15px;
 }
 /**********************
 BODY
@@ -178,7 +186,6 @@ BODY
 #contact_banner_text p {
     text-align: center;
 }
-
 /**********************
 COLORS
 **********************/

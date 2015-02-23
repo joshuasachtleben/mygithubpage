@@ -16,13 +16,24 @@
     NAVIGATION
     **********************/
 
+
     .header_nav_menu {
         display: inline-block;
         float: right;
     }
+
+    .nav_menu {
+        display: none;
+    }
     nav {
         background: none;
         text-align: right;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 10px 0;
+        border-bottom: 0;
     }
     #header_title {
         float: left;
@@ -46,26 +57,5 @@
     #contact_banner_text {
         display: table-cell;
         vertical-align: middle;
-    }
-}
-/* Small screens at 480px or smaller */
-
-@media screen and (max-width: 480px) {
-    /**********************
-    NAVIGATION
-    This functionality will be enabled with a menu icon within the header
-    **********************/
-
-    nav ul {
-        margin: 0;
-        padding: 0;
-    }
-    nav li {
-        display: block;
-        padding: 10px 0;
-        border-bottom: 1px solid #e3e3e3;
-    }
-    nav li:last-child {
-        border-bottom: 0;
     }
 }
