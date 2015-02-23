@@ -153,10 +153,17 @@ BODY
     line-height: 1.25em;
 }
 
+.social_icon {
+    width: 20px;
+    padding-right: 10px;
+}
+
 .banner {
     background-color: white;
-    min-height: 100%;
+    min-height: 600px;
+    height: 100%;
     margin: 0 -20px 0 -20px;
+
 }
 
 #banner_content {
@@ -185,7 +192,10 @@ BODY
 
 #contact_banner_text p {
     text-align: center;
+    font-size: 1.5em;
 }
+
+
 /**********************
 COLORS
 **********************/
