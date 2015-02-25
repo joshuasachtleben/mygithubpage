@@ -43,24 +43,5 @@
     BODY
     **********************/
 
-    #avatar {
-        padding-right: 2.5%;
-        display: inline-table;
-        vertical-align: middle;
-    }
 
-    #banner_content {
-        display: table-cell;
-    }
-
-    #contact_banner {
-        padding-left: 2.5%;
-        height: 100%;
-        display: inline-table;
-        vertical-align: middle;
-    }
-    #contact_banner_text {
-        display: table-cell;
-        vertical-align: middle;
-    }
 }

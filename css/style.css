@@ -5,6 +5,7 @@ GENERAL
 * {
     margin: 0;
     padding: 0;
+    color: #222;
 }
 
 html,
@@ -160,6 +161,11 @@ BODY
 
 .banner {
     background-color: white;
+/*    background: -webkit-linear-gradient(to bottom, rgba(255,255,255,1) 50%, rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+/*    background: -o-linear-gradient(to bottom, rgba(255,255,255,1) 50%, rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+/*    background: -moz-linear-gradient(to bottom, rgba(255,255,255,1) 50%, rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+/*    background: linear-gradient(to bottom, rgba(255,255,255,1) 50%, rgba(0,0,0,0)); /* Standard syntax */
+
     min-height: 600px;
     height: 100%;
     margin: 0 -20px 0 -20px;
@@ -170,14 +176,14 @@ BODY
     max-width: 960px;
     /*    padding-top: 86px;*/
 
-    height: 300px;
+    height: 450px;
     max-width: 960px;
     text-align: center;
     margin: auto;
 }
 
 #avatar {
-    height: 100%;
+    height: 300px;
 }
 
 #avatar img {
@@ -186,15 +192,17 @@ BODY
     height: 100%;
 }
 
-#contact_banner_text {
-    padding-top: 5%;
-}
-
-#contact_banner_text p {
+#banner_caption {
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     font-size: 1.5em;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 40px 20px 0;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 4px rgba(0,0,0,0.3);
 }
-
 
 /**********************
 COLORS
