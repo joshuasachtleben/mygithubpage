@@ -44,15 +44,20 @@
     **********************/
 
     #avatar {
-        float: left;
-        margin-left: 15%;
+        padding-right: 2.5%;
+        display: inline-table;
+        vertical-align: middle;
+    }
+
+    #banner_content {
+        display: table-cell;
     }
 
     #contact_banner {
-        float: left;
-        margin-left: 5%;
+        padding-left: 2.5%;
         height: 100%;
-        display: table;
+        display: inline-table;
+        vertical-align: middle;
     }
     #contact_banner_text {
         display: table-cell;
