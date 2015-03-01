@@ -1,0 +1,64 @@
+/* Large screens at 780px or bigger */
+
+@media screen and (min-width: 780px) {
+    /**********************
+    NAVIGATION
+    **********************/
+
+    header {
+        padding: 0;
+    }
+    .header_title {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .header_nav_menu {
+        display: inline-block;
+        float: right;
+    }
+
+    .nav_menu {
+        display: none;
+    }
+    nav {
+        background: none;
+        text-align: right;
+    }
+
+    nav li {
+        display: inline-block;
+        padding: 10px 0;
+        border-bottom: 0;
+    }
+    #header_title {
+        float: left;
+        text-align: left;
+    }
+
+    /**********************
+    BODY
+    **********************/
+    .content_section {
+      padding-bottom: 2.5%;
+    }
+}
+
+@media screen and (max-height: 525px) {
+    .banner {
+        min-height: 0;
+        padding: 50px 0;
+    }
+
+    .content {
+        position: relative;
+        padding-top: 56px;
+        top: 0;
+    }
+
+
+
+    #banner_content {
+        position: relative;
+    }
+}
