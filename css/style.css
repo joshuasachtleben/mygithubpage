@@ -160,10 +160,12 @@ BODY
 }
 
 .banner {
-    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* Standard syntax *
+/*    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Safari 5.1 to 6.0 */
+/*    background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Opera 11.1 to 12.0 */
+/*    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Firefox 3.6 to 15 */
+/*    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* Standard syntax */
+  background: #edf6f9;
+
 
 
     min-height: 525px;
