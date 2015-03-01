@@ -35,6 +35,13 @@
         float: left;
         text-align: left;
     }
+
+    /**********************
+    BODY
+    **********************/
+    .content_section {
+      padding-bottom: 2.5%;
+    }
 }
 
 @media screen and (max-height: 525px) {
@@ -48,6 +55,8 @@
         padding-top: 56px;
         top: 0;
     }
+
+
 
     #banner_content {
         position: relative;
