@@ -139,7 +139,7 @@ BODY
 
 .content_section {
   font-family: 'Roboto', sans-serif;
-  font-weight: 100;
+  font-weight: 300;
   background-color: white;
   max-width: 960px;
   margin: 50px auto;
@@ -148,7 +148,7 @@ BODY
 }
 
 .content_section h1 {
-  font-weight: 100;
+  font-weight: 300;
   margin: 0;
   border-bottom: 1px solid #e5e5e5;
   padding: 2% 5%;
@@ -201,13 +201,13 @@ BODY
 #banner_caption {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 1.5em;
+  font-weight: 300;
+  font-size: 2em;
   margin: 0 auto;
   max-width: 600px;
   padding: 40px 20px 0;
   text-transform: uppercase;
-  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 /**********************
 COLORS
