@@ -157,6 +157,7 @@ BODY
   margin: 0;
   border-bottom: 1px solid #e5e5e5;
   padding: 2% 5%;
+  color: #4ea6ca;
 }
 
 .content_section p {
@@ -212,8 +213,20 @@ BODY
   max-width: 600px;
   padding: 40px 20px 0;
   text-transform: uppercase;
-  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 0px #e0e0e0;
 }
+
+/**********************
+FOOTER
+**********************/
+
+footer {
+  text-align: center;
+  padding-bottom: 50px;
+  color: #4ea6ca;
+  text-shadow: 1px 1px 1px #e0e0e0;
+}
+
 /**********************
 COLORS
 **********************/
