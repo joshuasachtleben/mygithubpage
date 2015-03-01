@@ -3,234 +3,237 @@ GENERAL
 **********************/
 
 * {
-    margin: 0;
-    padding: 0;
-    color: #222;
+  margin: 0;
+  padding: 0;
+  color: #212121;
 }
 
 html,
 body {
-    /*    font-family: 'Roboto', sans-serif;*/
+  /*    font-family: 'Roboto', sans-serif;*/
 
-    font-family: 'Ubuntu', sans-serif;
-    height: 100%;
-
+  font-family: 'Ubuntu', sans-serif;
+  height: 100%;
 }
 
 .wrapper {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 p {
-    padding: 10px 0;
-    line-height: 1.25em;
-    text-align: justify;
+  padding: 10px 0;
+  line-height: 1.25em;
+  text-align: justify;
 }
 
 .verticalCenter {
-    /* Absolute CSS centering...used for vertical centering */
+  /* Absolute CSS centering...used for vertical centering */
 
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
 }
 
 .bottom_shadow {
-    box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
 /**********************
 HEADER
 **********************/
 
 header {
-    width: 100%;
-    height: 56px;
-    position: fixed;
-    /* keeps header locked at the top */
+  width: 100%;
+  height: 56px;
+  position: fixed;
+  /* keeps header locked at the top */
 
-    z-index: 999;
-    /* display header above all other content by assigning a high z-index */
+  z-index: 999;
+  /* display header above all other content by assigning a high z-index */
 
-    box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
 }
 
 .header_title {
-    height: 30px;
-    /* must set height of child element if using absolute vertical centering in verticalCenter class on parent element */
+  height: 30px;
+  /* must set height of child element if using absolute vertical centering in verticalCenter class on parent element */
 
-    text-align: center;
-    font-size: 1.5em;
+  text-align: center;
+  font-size: 1.5em;
 }
 /**********************
 NAVIGATION
 **********************/
 
 .header_nav_menu {
-    display: none;
-    /* hide nav within header by default, show with responsive.css */
+  display: none;
+  /* hide nav within header by default, show with responsive.css */
 
-    height: 40px;
-    /* must set height of child element if using absolute vertical centering in verticalCenter class on parent element */
+  height: 40px;
+  /* must set height of child element if using absolute vertical centering in verticalCenter class on parent element */
 }
 
 .nav_menu {
-    margin-top: 56px;
-    height: 160px;
-    box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-    display: none;
-    /* hide by default, show with menu icon press */
+  margin-top: 56px;
+  height: 160px;
+  box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+  display: none;
+  /* hide by default, show with menu icon press */
 }
 
 nav {
-    text-align: center;
-    height: 100%;
+  text-align: center;
+  height: 100%;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav li {
-    display: block;
-    padding-top: 10px;
-    border-bottom: 1px solid #e3e3e3;
-    height: 40px;
-    box-sizing: border-box;
+  display: block;
+  padding-top: 10px;
+  border-bottom: 1px solid #e3e3e3;
+  height: 40px;
+  box-sizing: border-box;
 }
 
 nav li:last-child {
-    border-bottom: 0;
+  border-bottom: 0;
 }
 
 nav a {
-    font-weight: 700;
-    padding: 5px 15px;
+  font-weight: 700;
+  padding: 5px 15px;
 }
 /**********************
 BODY
 **********************/
 
 .content {
-    height: auto;
-    /* set to allow banner div to fill remaining space after header */
+  height: auto;
+  /* set to allow banner div to fill remaining space after header */
 
-    width: 100%;
-    position: absolute;
-    top: 56px;
-    /* height of banner (56px) */
+  width: 100%;
+  position: absolute;
+  top: 56px;
+  /* height of banner (56px) */
 
-    bottom: 0;
-    /*this pushes the bottom of the content container to the bottom of viewport to avoid overlap when calculating banner height */
+  bottom: 0;
+  /*this pushes the bottom of the content container to the bottom of viewport to avoid overlap when calculating banner height */
 
-    box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .content_section {
-    background-color: white;
-    max-width: 960px;
-    padding: 5%;
-    margin: 50px auto;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  background-color: white;
+  max-width: 960px;
+  margin: 50px auto;
+  padding-bottom: 5%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .content_section h1 {
-    margin: 0;
+  font-weight: 100;
+  margin: 0;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 2% 5%;
 }
 
-.contact_section p {
-    line-height: 1.25em;
+.content_section p {
+  line-height: 1.25em;
+  padding: 2.5% 5% 0 5%;
 }
 
 .social_icon {
-    width: 20px;
-    padding-right: 10px;
+  width: 20px;
+  padding-right: 10px;
 }
 
 .banner {
-/*    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Safari 5.1 to 6.0 */
-/*    background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Opera 11.1 to 12.0 */
-/*    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Firefox 3.6 to 15 */
-/*    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* Standard syntax */
+  /*    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Safari 5.1 to 6.0 */
+  /*    background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Opera 11.1 to 12.0 */
+  /*    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* For Firefox 3.6 to 15 */
+  /*    background: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgb(227, 227, 227)), url('../images/banner-noise.png'); /* Standard syntax */
+
   background: #edf6f9;
+  min-height: 525px;
+  /* same height as media query for max-height */
 
-
-
-    min-height: 525px;
-    /* same height as media query for max-height */
-    height: 100%;
-    margin: 0 -20px 0 -20px;
-
+  height: 100%;
+  margin: 0 -20px 0 -20px;
 }
 
 #banner_content {
-    max-width: 960px;
-    /*    padding-top: 86px;*/
+  max-width: 960px;
+  /*    padding-top: 86px;*/
 
-    height: 450px;
-    max-width: 960px;
-    text-align: center;
-    margin: auto;
+  height: 450px;
+  max-width: 960px;
+  text-align: center;
+  margin: auto;
 }
 
 #avatar {
-    height: 300px;
+  height: 300px;
 }
 
 #avatar img {
-    border: 2px solid #222;
-    border-radius: 100%;
-    height: 100%;
+  border: 2px solid #222;
+  border-radius: 100%;
+  height: 100%;
 }
 
 #banner_caption {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 1.5em;
-    margin: 0 auto;
-    max-width: 600px;
-    padding: 40px 20px 0;
-    text-transform: uppercase;
-    text-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 40px 20px 0;
+  text-transform: uppercase;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
 }
-
 /**********************
 COLORS
 **********************/
 
 body {
-/*    background-color: #e3e3e3;*/
+  /*    background-color: #e3e3e3;*/
+
   background-image: url('../images/background-noise.png');
 }
 
 header {
-    background: #4ea6ca;
+  background: #4ea6ca;
 }
 
 header h1 {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 nav {
-    background: #7BAAF7;
+  background: #7BAAF7;
 }
 
 nav a,
 nav a:visited {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 /* Palette generated by Material Palette - materialpalette.com/indigo/grey */
 /*
