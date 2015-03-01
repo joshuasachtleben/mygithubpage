@@ -120,6 +120,11 @@ nav a {
 BODY
 **********************/
 
+.anchor {
+  position: absolute;
+  margin-top: -56px;
+}
+
 .content {
   height: auto;
   /* set to allow banner div to fill remaining space after header */
