@@ -163,7 +163,8 @@ BODY
 .content_section h2 {
   margin-bottom: -1.5%;
   padding: 2.5% 5% 0;
-  font-weight: 300;
+  font-weight: 400;
+  font-size: 1.25em;
 }
 
 .content_section p {
