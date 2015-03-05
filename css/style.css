@@ -160,9 +160,20 @@ BODY
   color: #4ea6ca;
 }
 
+.content_section h2 {
+  margin-bottom: -1.5%;
+  padding: 2.5% 5% 0;
+  font-weight: 300;
+}
+
 .content_section p {
   line-height: 1.25em;
   padding: 2.5% 5% 0 5%;
+}
+
+.content_section ul {
+  margin: 0 5%;
+  padding: 0 40px;
 }
 
 .social_icon {
