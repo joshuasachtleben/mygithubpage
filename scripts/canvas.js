@@ -26,6 +26,9 @@ var sprite = function(options) {
       ticksPerFrame = options.ticksPerFrame || 0; //number of updates until next frame is displayed
       numberOfFrames = options.numberOfFrames || 1; // number of frames from the spritesheet. default is 1 if it isn't declared
   sprite.context = options.context;
+  sprite.x = options.x;
+  sprite.y = options.y;
+  sprite.velocity = options.velocity;
   sprite.width = options.width;
   sprite.height = options.height;
   sprite.image = options.image;
@@ -47,15 +50,15 @@ var sprite = function(options) {
     }
 
     sprite.context.drawImage(
-      sprite.image,                               //source image
-      frameIndex * sprite.width / numberOfFrames, //source x
-      0,                                          //source y
-      sprite.width / numberOfFrames,              //source width
-      sprite.height,                              //source height
-      0,                                          //destination x
-      0,                                          //destination y
-      sprite.width / numberOfFrames * sprite.scale,              //destination width
-      sprite.height * sprite.scale);                             //destination height
+      sprite.image,                                 //source image
+      frameIndex * sprite.width / numberOfFrames,   //source x
+      0,                                            //source y
+      sprite.width / numberOfFrames,                //source width
+      sprite.height,                                //source height
+      sprite.x,                                     //destination x
+      sprite.y,                                     //destination y
+      sprite.width / numberOfFrames * sprite.scale, //destination width
+      sprite.height * sprite.scale);                //destination height
   };
 
   sprite.update = function(){
@@ -70,6 +73,31 @@ var sprite = function(options) {
         frameIndex = 0;
       }
     }
+
+    //update position
+    //check x position
+    if(sprite.x + sprite.width / numberOfFrames > canvasWidth || sprite.x < 0) {
+      sprite.velocity.x *= -1;
+      // reset x position if out of bounds
+      if(sprite.x < 0) {
+        sprite.x = 0;
+      } else {
+        sprite.x = canvasWidth - sprite.width / numberOfFrames;
+      }
+    }
+    //check y position
+    if(sprite.y + sprite.height > canvasHeight || sprite.y < 0) {
+      sprite.velocity.y *= -1;
+      // reset y position if out of bounds
+      if(sprite.y < 0) {
+        sprite.y = 0;
+      } else {
+        sprite.y = canvasHeight - sprite.height;
+      }
+    }
+    sprite.x += sprite.velocity.x;
+    sprite.y += sprite.velocity.y;
+
   };
 
   return sprite;
@@ -78,6 +106,9 @@ var sprite = function(options) {
 //Create ufo sprite object
 var ufo = sprite({
   context: canvas.getContext("2d"),
+  x: 0,
+  y: 0,
+  velocity: {x: 2, y:3},
   width: 57, // image width (19) * frames (3)
   height: 9,
   scale: 1,
@@ -102,4 +133,5 @@ window.addEventListener("resize", function() {
   canvasHeight = banner.offsetHeight;
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
+
 });
