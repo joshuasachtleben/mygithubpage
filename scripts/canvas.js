@@ -29,9 +29,23 @@ var sprite = function(options) {
   sprite.width = options.width;
   sprite.height = options.height;
   sprite.image = options.image;
+  sprite.scale = options.scale; //multiplier for sprite scale
+  sprite.disableSmoothing = options.disableSmoothing; //disables smoothing for crisp scaled pixels
 
   //Draws image
   sprite.render = function () {
+
+    sprite.context.clearRect(0, 0, canvasWidth, canvasHeight);
+
+    //if disableSmoothing true, disable the ImageSmoothingEnabled property which is true by default
+    //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images#Controlling_image_scaling_behavior
+    if(sprite.disableSmoothing) {
+      sprite.context.mozImageSmoothingEnabled = false;
+      sprite.context.webkitImageSmoothingEnabled = false;
+      sprite.context.msImageSmoothingEnabled = false;
+      sprite.context.imageSmoothingEnabled = false;
+    }
+
     sprite.context.drawImage(
       sprite.image,                               //source image
       frameIndex * sprite.width / numberOfFrames, //source x
@@ -40,8 +54,8 @@ var sprite = function(options) {
       sprite.height,                              //source height
       0,                                          //destination x
       0,                                          //destination y
-      sprite.width / numberOfFrames,              //destination width
-      sprite.height);                             //destination height
+      sprite.width / numberOfFrames * sprite.scale,              //destination width
+      sprite.height * sprite.scale);                             //destination height
   };
 
   sprite.update = function(){
@@ -66,9 +80,11 @@ var ufo = sprite({
   context: canvas.getContext("2d"),
   width: 57, // image width (19) * frames (3)
   height: 9,
+  scale: 1,
   image: ufoImage,
   numberOfFrames: 3,
-  ticksPerFrame: 4
+  ticksPerFrame: 4,
+  disableSmoothing: true
 });
 
 var gameLoop = function() {
