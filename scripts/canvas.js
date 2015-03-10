@@ -16,7 +16,7 @@ canvas.height = canvasHeight;
 
 //Create new image object to draw
 var ufoImage = new Image();
-ufoImage.src = "../images/ufo_spritesheet.png";
+ufoImage.src = "./images/ufo_spritesheet.png";
 
 //Define sprite object
 var sprite = function(options) {
