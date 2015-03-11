@@ -14,6 +14,9 @@ var canvas = document.getElementById('canvas');
 canvas.width = canvasWidth;
 canvas.height = canvasHeight;
 
+//Initialize mouse information
+var mouseX, mouseY, mouseFollow;
+
 //Create new image object to draw
 var ufoImage = new Image();
 ufoImage.src = "./images/ufo_spritesheet.png";
@@ -34,6 +37,8 @@ var sprite = function(options) {
   sprite.image = options.image;
   sprite.scale = options.scale; //multiplier for sprite scale
   sprite.disableSmoothing = options.disableSmoothing; //disables smoothing for crisp scaled pixels
+
+
 
   //Draws image
   sprite.render = function () {
@@ -95,8 +100,27 @@ var sprite = function(options) {
         sprite.y = canvasHeight - sprite.height;
       }
     }
-    sprite.x += sprite.velocity.x;
-    sprite.y += sprite.velocity.y;
+
+    if(mouseFollow) {
+      //calculate distance between mouse and sprite
+      var dx = mouseX - sprite.x - ((sprite.width / numberOfFrames) / 2); //distance on x-axis
+      var dy = mouseY - sprite.y - sprite.height / 2 ; //distance on y-axis
+      //calculate hypotenuse of triangle for direct distance
+      var distance = Math.abs(Math.sqrt(dx * dx + dy * dy));
+      var steps = distance / sprite.velocity.standard;
+      var xSteps = dx / steps;
+      var ySteps = dy / steps;
+
+      //move to new position
+      if(steps > 1) {
+        sprite.x += xSteps;
+        sprite.y += ySteps;
+      }
+
+    } else {
+      sprite.x += sprite.velocity.x;
+      sprite.y += sprite.velocity.y;
+    }
 
   };
 
@@ -108,7 +132,7 @@ var ufo = sprite({
   context: canvas.getContext("2d"),
   x: 0,
   y: 0,
-  velocity: {x: 2, y:3},
+  velocity: {x: 2, y:3, standard: 2},
   width: 57, // image width (19) * frames (3)
   height: 9,
   scale: 1,
@@ -133,5 +157,22 @@ window.addEventListener("resize", function() {
   canvasHeight = banner.offsetHeight;
   canvas.width = canvasWidth;
   canvas.height = canvasHeight;
+});
 
+//update mouse position on mouse move
+banner.addEventListener("mousemove", function(event) {
+  var rect = canvas.getBoundingClientRect();  //gets properties of element relative to viewport
+  mouseX = event.clientX - rect.left;  //adjusts for any offset on the left of the element
+  mouseY = event.clientY - rect.top;  //adjusts for any offset on the top of the element
+  console.log("X: " + mouseX + ", Y: " + mouseY);
+});
+
+//start following mouse when mouse enters element
+banner.addEventListener("mouseover", function() {
+  mouseFollow = true;
+});
+
+//stop following mouse when mouse leaves element
+banner.addEventListener("mouseout", function() {
+  mouseFollow = false;
 });
