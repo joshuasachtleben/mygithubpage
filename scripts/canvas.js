@@ -168,7 +168,7 @@ banner.addEventListener("mousemove", function(event) {
   var rect = canvas.getBoundingClientRect();  //gets properties of element relative to viewport
   mouseX = event.clientX - rect.left;  //adjusts for any offset on the left of the element
   mouseY = event.clientY - rect.top;  //adjusts for any offset on the top of the element
-  console.log("X: " + mouseX + ", Y: " + mouseY);
+  //console.log("X: " + mouseX + ", Y: " + mouseY);
 });
 
 //start following mouse when mouse enters element
