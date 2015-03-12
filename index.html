@@ -61,7 +61,7 @@
             <div id="about"></div>
             <section class="content_section">
                 <h1>About</h1>
-                <p>Over the last <span id="years"></span> years, I have acquired a wide range of software development skills.  I obtained a strong foundation in software development through my education at Sullivan University, and I have worked to continue building upon that knowledge with dedicated self-study and practical application both in the workplace and with personal projects.</p>
+                <p>Over the last <span id="years">7</span> years, I have acquired a wide range of software development skills.  I obtained a strong foundation in software development through my education at Sullivan University, and I have worked to continue building upon that knowledge with dedicated self-study and practical application both in the workplace and with personal projects.</p>
                 <p>While continuing to learn and improve competencies required to accomplish core responsibilities at Heartland Payment Systems and Stored Value Solutions, I have spent my free time researching JavaScript and responsive CSS to create useful, dynamic websites.  I have also studied other programming languages including Java and C# to both hone skills I acquired from Sullivan University as well as broaden my experience with object-oriented programming and back-end frameworks.</p>
                 <p>Currently, I am participating in the Code Louisville training program to refresh my existing knowledge of web development technologies.  Some of the content covered so far has been learning how to build a responsive website framework with HTML 5 and CSS3, discovering how to use JavaScript/jQuery to enhance page interactivity, and using AJAX to exchange data with web servers.</p>
             </section>
@@ -122,6 +122,12 @@
       </footer>
     </div>
   </div>
+    <script>
+    var startDate = new Date('06/01/2008').getFullYear();
+    var currentDate = new Date().getFullYear();
+    var years = currentDate - startDate;
+    document.getElementById('years').innerHTML = years;
+  </script>
   <script type="text/javascript" src="scripts/canvas.js"></script>
   <script type="text/javascript" src="scripts/footer.js"></script>
 </body>
