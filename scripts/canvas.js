@@ -81,30 +81,30 @@ var sprite = function(options) {
 
     //update position
     //check x position
-    if(sprite.x + sprite.width / numberOfFrames > canvasWidth || sprite.x < 0) {
+    if(sprite.x + sprite.width / numberOfFrames * sprite.scale > canvasWidth || sprite.x < 0) {
       sprite.velocity.x *= -1;
       // reset x position if out of bounds
       if(sprite.x < 0) {
         sprite.x = 0;
       } else {
-        sprite.x = canvasWidth - sprite.width / numberOfFrames;
+        sprite.x = canvasWidth - sprite.width / numberOfFrames * sprite.scale;
       }
     }
     //check y position
-    if(sprite.y + sprite.height > canvasHeight || sprite.y < 0) {
+    if(sprite.y + sprite.height * sprite.scale > canvasHeight || sprite.y < 0) {
       sprite.velocity.y *= -1;
       // reset y position if out of bounds
       if(sprite.y < 0) {
         sprite.y = 0;
       } else {
-        sprite.y = canvasHeight - sprite.height;
+        sprite.y = canvasHeight - sprite.height * sprite.scale;
       }
     }
 
     if(mouseFollow) {
       //calculate distance between mouse and sprite
-      var dx = mouseX - sprite.x - ((sprite.width / numberOfFrames) / 2); //distance on x-axis
-      var dy = mouseY - sprite.y - sprite.height / 2 ; //distance on y-axis
+      var dx = mouseX - sprite.x - ((sprite.width / numberOfFrames * sprite.scale) / 2); //distance on x-axis
+      var dy = mouseY - sprite.y - sprite.height * sprite.scale / 2 ; //distance on y-axis
       //calculate hypotenuse of triangle for direct distance
       var distance = Math.abs(Math.sqrt(dx * dx + dy * dy));
       var steps = distance / sprite.velocity.standard;
@@ -132,10 +132,10 @@ var ufo = sprite({
   context: canvas.getContext("2d"),
   x: 0,
   y: 0,
-  velocity: {x: 2, y:3, standard: 2},
+  velocity: {x: randomInt(1, 5), y:randomInt(1, 5), standard: 10},
   width: 57, // image width (19) * frames (3)
   height: 9,
-  scale: 1,
+  scale: 2,
   image: ufoImage,
   numberOfFrames: 3,
   ticksPerFrame: 4,
@@ -147,6 +147,10 @@ var gameLoop = function() {
   ufo.update();
   ufo.render();
 };
+
+function randomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 //Create an event listener to draw image after image has loaded
 ufoImage.addEventListener("load", gameLoop);
