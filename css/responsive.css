@@ -36,6 +36,10 @@
         text-align: left;
     }
 
+    .menuButton {
+      display: none;
+    }
+
     /**********************
     BODY
     **********************/
