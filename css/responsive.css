@@ -56,9 +56,13 @@
         top: 0;
     }
 
-
-
     #banner_content {
         position: relative;
+    }
+
+    #canvas {
+      position: absolute;
+      height: 550px;
+      margin-top: -50px;
     }
 }

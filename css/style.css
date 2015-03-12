@@ -125,6 +125,12 @@ BODY
   margin-top: -56px;
 }
 
+.company_logo {
+  padding: 2.5% 5% 0 5%;
+  width: auto;
+  height: auto;
+}
+
 .content {
   height: auto;
   /* set to allow banner div to fill remaining space after header */
@@ -165,6 +171,20 @@ BODY
   padding: 2.5% 5% 0;
   font-weight: 400;
   font-size: 1.25em;
+}
+
+.content_section h3 {
+  margin-bottom: -1.5%;
+  padding: 1.5% 5% 0;
+  font-weight: 300;
+  font-size: 1.25em;
+}
+
+.content_section h4 {
+  margin-bottom: -1.5%;
+  padding: 1.5% 5% 1.5%;
+  font-weight: 300;
+  font-size: 1em;
 }
 
 .content_section p {
