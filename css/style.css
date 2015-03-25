@@ -23,7 +23,6 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
 }
 
 p {
@@ -60,6 +59,10 @@ header {
   /* display header above all other content by assigning a high z-index */
 
   box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+}
+
+header a {
+  color: #fff;
 }
 
 .header_title {
@@ -336,6 +339,7 @@ nav a:visited {
   color: #FFFFFF;
 }
 
+a,
 footer,
 #contactTitle {
   color: #4ea6ca;
