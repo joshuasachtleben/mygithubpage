@@ -45,6 +45,15 @@
       display: none;
     }
 
+    #contactBox {
+      display: inline-block;
+      width: 23.3333%;
+    }
+
+    #contactBox img {
+      width: 75px;
+    }
+
     /**********************
     BODY
     **********************/
