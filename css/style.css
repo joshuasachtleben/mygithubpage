@@ -72,6 +72,11 @@ header a {
   text-align: center;
   font-size: 1.5em;
 }
+
+.hidden {
+  display: none;
+}
+
 /**********************
 NAVIGATION
 **********************/
@@ -87,9 +92,6 @@ NAVIGATION
 .nav_menu {
   height: 160px;
   box-shadow: 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
-  display: none;
-  /* hide by default, show with menu icon press */
-
   position: absolute;
   top: 56px;
   width: 100%;

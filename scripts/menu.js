@@ -1,8 +1,10 @@
 var $menuOpen = $("#menuOpen"),
     $menuClose = $("#menuClose"),
+    $navMenu = $(".nav_menu"),
     $menuLinks = $(".nav_menu").find("a");
 
-$menuClose.hide();
+$menuClose.addClass("hidden");
+$navMenu.addClass("hidden");
 
 $menuOpen.click(function() {
   openMenu();
@@ -17,15 +19,13 @@ $menuLinks.click(function() {
 });
 
 var openMenu = function() {
-  $(".nav_menu").slideToggle("slow", function() {
-    $menuOpen.hide();
-    $menuClose.show();
-  });
+  $menuOpen.addClass("hidden");
+  $menuClose.removeClass("hidden");
+  $navMenu.removeClass("hidden");
 };
 
 var closeMenu = function () {
-  $(".nav_menu").slideToggle("slow", function() {
-    $menuClose.hide();
-    $menuOpen.show();
-  });
+  $menuClose.addClass("hidden");
+  $menuOpen.removeClass("hidden");
+  $navMenu.addClass("hidden");
 };
